@@ -144,10 +144,13 @@ body {
 #history{
     
 }
+form textarea {
+    vertical-align: top;
+}
 /*------------------REGISTRATION-------*/
 
 .main-regist {
-    background-image: url("images/regist-background.png");
+    background-image: url("/images/form.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

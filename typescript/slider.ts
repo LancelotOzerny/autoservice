@@ -8,8 +8,13 @@ let slideActive : boolean = false;
 slideLeft.addEventListener("click", SlideLeft);
 slideRight.addEventListener("click", SlideRight);
 
+let slideInterval : number = setInterval(SlideLeft, 5000);
+
 function SlideRight() : void
 {
+    clearInterval(slideInterval);
+    slideInterval = setInterval(SlideRight, 5000);
+
     if (slideActive)
     {
         return;
@@ -41,6 +46,9 @@ function SlideRight() : void
 
 function SlideLeft() : void
 {
+    clearInterval(slideInterval);
+    slideInterval = setInterval(SlideLeft, 5000);
+
     if (slideActive)
     {
         return;

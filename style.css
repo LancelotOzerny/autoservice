@@ -23,7 +23,7 @@ body {
 
 
 
-/* ------------- AGENERAL ---------------- */
+/* ------------- GENERAL ---------------- */
 .page-block-title {
     font-size: 48px;
     display: block;
@@ -31,6 +31,8 @@ body {
     padding-bottom: 80px;
     padding-top: 100px;
 }
+
+
 .main-header-title,
 .main-header-subtitle,
 .page-block-title {
@@ -51,11 +53,34 @@ body {
 
 /* --------------- MAIN HEDDER ------------------ */
 .main-header {
-    background-image: url("images/main-background.png");
+    background-image: url("/images/slider/0.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    position: relative;
 }
+.slider-arrow {
+    position: absolute;
+    transform: scaleX(60%);
+    font-size: 34px;
+    top: calc(50% - 17px);
+    cursor: pointer;
+    color: #F8F3F5;
+    user-select: none;
+}
+.slider-arrow:hover {
+    color: #a7a5ff;
+}
+.slider-arrow:active {
+    color: #9694FF;
+}
+#left-slider-arrow {
+    left: 20px;
+}
+#right-slider-arrow {
+    right: 20px;
+}
+
 .main-header-wrapper {
     min-height: 100vh;
     display: grid;

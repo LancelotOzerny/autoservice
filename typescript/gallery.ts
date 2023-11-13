@@ -1,16 +1,16 @@
-let slides = document.getElementsByClassName('gallery-photo--wrapper') as HTMLCollectionOf<HTMLElement>;
-let slidesWrapper : Element = document.getElementsByClassName('gallery-wrapper')[0];
+let images = document.getElementsByClassName('gallery-photo--wrapper') as HTMLCollectionOf<HTMLElement>;
+let galleryWrapper : Element = document.getElementsByClassName('gallery-wrapper')[0];
 let currentImage: number = 0;
 
-for (let i = 0; i < slides.length; ++i) {
-    slides[i].addEventListener('click', () => {
-        slides[currentImage].style.gridRow = "auto";
-        slides[currentImage].style.gridColumn = "auto";
+for (let i = 0; i < images.length; ++i) {
+    images[i].addEventListener('click', () => {
+        images[currentImage].style.gridRow = "auto";
+        images[currentImage].style.gridColumn = "auto";
 
         currentImage = i;
 
-        slides[currentImage].style.gridRow = "1/3";
-        slides[currentImage].style.gridColumn = "1/3";
+        images[currentImage].style.gridRow = "1/3";
+        images[currentImage].style.gridColumn = "1/3";
 
         setTimeout(scrollToSlides, 200);
     });
@@ -18,5 +18,5 @@ for (let i = 0; i < slides.length; ++i) {
 
 function scrollToSlides() : void
 {
-    slidesWrapper.scrollIntoView({behavior: 'smooth', block: 'start'});
+    galleryWrapper.scrollIntoView({behavior: 'smooth', block: 'start'});
 }
